@@ -30,5 +30,5 @@ app.use(morgan('dev'))
 // START THE SERVER
 // Make your Express server listen on port 5005:
 app.listen(PORT, ()=> {
-    console.log(`Server is listening on PORT ${PORT}`)
+    console.log(`Server is listening on PORT ${PORT} and changes, with nodemon restarting automatically`)
 })
