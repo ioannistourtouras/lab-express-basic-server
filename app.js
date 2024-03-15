@@ -2,6 +2,7 @@
 // Here you should import the required packages for your Express app: `express` and `morgan`
 const express = require('express')
 const morgan = require('morgan')
+const projects = require('./data/projects.json')
 
 const PORT = process.env.PORT || 8080
 
@@ -30,6 +31,10 @@ app.get('/', (req, res)=> {
 
 app.get('/blog', (req, res)=> {
     res.sendFile(__dirname + '/views/blog.html')
+})
+
+app.get('/api/projects', (req, res)=> {
+    res.json(projects)
 })
 
 
